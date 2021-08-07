@@ -1,0 +1,58 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "title": "Harlem Combat",
+            "price": 10.99,
+            "image_url": "./images/shoe1.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Harlem Heels",
+            "price": 12.99,
+            "image_url": "./images/shoe2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Downtown Platform",
+            "price": 12.99,
+            "image_url": "./images/shoe3.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Hayden Everyday Tee ",
+            "price": 22.99,
+            "image_url": "./images/top1.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Casual Tee",
+            "price": 88.99,
+            "image_url": "./images/top2.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Lennon Everyday Knit Tank",
+            "price": 32.99,
+            "image_url": "./images/top3.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Carmen Gold Layered Bracelet",
+            "price": 45.99,
+            "image_url": "./images/accessory1.jpg"
+        },
+        {
+            "id": 8,
+            "title": "Raegen Gold Layered Bracelet",
+            "price": 33.99,
+            "image_url": "./images/accessory2.jpg"
+        },
+        {
+            "id": 9,
+            "title": "Logan Acrylic Drop Earrings ",
+            "price": 33.99,
+            "image_url": "./images/accessory3.jpg"
+        }
+    ]
+}
