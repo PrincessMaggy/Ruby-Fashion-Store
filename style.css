@@ -214,3 +214,57 @@ button:hover{
 
 
 
+
+/* bottom section */
+.bottom{
+    background-color: black;
+    margin: 1em 0 0 0;
+    text-align: center;
+}
+.bottom p{
+    color:white;
+}
+.bottom span{
+    font-size: 1.3rem;
+    word-spacing: normal;
+}
+.bottom i{
+    padding: 1em;
+    color: rgb(218, 197, 197);
+}
+.bottom i:hover{
+    color: red;
+}
+.lists{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+.link ul {
+  margin: 0 3em 2em 3em; 
+  padding: 1em 2em 0 0;
+}
+.lists ul li {
+    list-style: none;
+}
+.link ul li a{
+    text-decoration: none;
+    color: gray;
+}
+.link ul li a:hover{
+    font-weight: 700;
+}
+
+
+
+
+
+/* footer section */
+
+footer{
+    background-color: rgb(243, 235, 235);
+    text-align: center;
+    padding: 1em;
+}
+
+
