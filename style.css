@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+:root {
+    --primaryColor: #f09d51;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: var(--mainBlack);
+    background: var(--mainWhite);
+}
+h1, h2, span{
+    /* font-family: 'Dancing Script', cursive; */
+    font-weight: 700;
+
+}
+button{
+    background-color:var(--primaryColor) ;
+    color: white;
+    padding: 0.5em;
+    border:none ;
+    border-radius:15px 50px 30px;
+    margin: 1em 0 1em 0;
+    transition: var(--mainTransition);
+    cursor: pointer;
+}
+button:hover{
+    color: red;
+    background: transparent;
+    border:1px var(--primaryColor) outset;
+}
+.btn3{
+    background-color: white;
+        color: red;
+        border: 1px red outset;
+        width: 14em;
+        padding: auto;
+    }
+    .btn4{
+        background-color: blue;
+        color: white;
+        border: none;
+        width: 14em;
+        padding: auto;
+    }
+ .btn3:hover{
+    color:white;
+    background-color: red;
+    transition: 0.3s ease;
+}
+
+/* Navigation menu */
+
+
+.cart-btn {
+    position: relative;
+    cursor: pointer;
+}
+.cart-items {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primaryColor);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: var(--mainWhite);
+}
+#search{
+    margin-top: 1em;
+    max-height: 2em;
+}
+
+/* --------------- End of Navbar ---------------- */
+
+/* --------------- Hero section ---------------- */
+.hero {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 2rem;
+}
+.banner-title {
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 3rem;
+}
+.banner-btn {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1rem;
+}
+
+
+
+
+/* --------------- Products Section ---------------- */
