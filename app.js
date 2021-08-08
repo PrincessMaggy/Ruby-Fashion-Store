@@ -6,7 +6,8 @@
     const cartContent = document.querySelector('.cart-content');
     const cartItemsCount = document.querySelector('.cart-items');
     const cartTotalPrice = document.querySelector('.cart-total');
-    const clearCartBtn = document.querySelector('.clear-cart');
+    const checkout =document.querySelector('.checkout');
+    
     const avaialableProducts = [];
     const cartData = getcartData();
     let cart = cartData || { items: [], totalPrice: 0 };
@@ -84,7 +85,7 @@
         const itemNode = createNode('div', 'cart-item', itemContent);
 
         cartContent.appendChild(itemNode);
-        clearCartBtn.removeAttribute('disabled');
+    
 
         // attach event to remove button
         itemNode
@@ -134,6 +135,7 @@
             cart.items = updatedCart;
             // update individual item in cart's quantity
             updateCartItemQty(updatedCart[currentItemIndex]);
+            alert("This item has been added to cart.");
         } else {
             cart.items.push(product);
             renderCartItemLayout(product)(formatPrice);
@@ -154,7 +156,8 @@
         cart.items = updatedCart.filter(item => item.id !== itemId);
 
         if (cart.items.length === 0) {
-            clearCartBtn.setAttribute('disabled', true);
+            checkout.style.display ="none";
+
         }
 
         renderCartItemsLayout();
@@ -185,17 +188,13 @@
         // remove item from cart if no qty remains
         if (updatedCart[currentItemIndex].qty <= 0) {
             removeItem(itemId);
+            
         } else {
             updatCartGlobalData();
         }
     };
 
-    const clearCart = () => {
-        cart = { items: [], totalPrice: 0 };
-
-        renderCartItemsLayout();
-        updatCartGlobalData();
-    };
+   
 
     const loadProductsFromJson = async () => {
         try {
@@ -268,14 +267,7 @@
     renderCartItemsLayout();
     updatCartGlobalData();
 
-    clearCartBtn.addEventListener('click', function() {
-        this.setAttribute('disabled', true);
-        clearCart();
-
-        setTimeout(() => {
-            hideCart();
-        }, 500);
-    });
+    
     cartBtn.addEventListener('click', showCart);
     closeCartBtn.addEventListener('click', hideCart);
 })();

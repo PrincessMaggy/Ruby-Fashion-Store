@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 :root {
     --primaryColor: #f09d51;
@@ -17,9 +18,11 @@ body {
     color: var(--mainBlack);
     background: var(--mainWhite);
 }
-h1, h2, span{
-    /* font-family: 'Dancing Script', cursive; */
+ .hero span, .bottom span{
+    font-family: 'Dancing Script', cursive;
     font-weight: 700;
+    font-size: 1.3rem;
+    word-spacing: normal;
 
 }
 button{
@@ -224,10 +227,7 @@ button:hover{
 .bottom p{
     color:white;
 }
-.bottom span{
-    font-size: 1.3rem;
-    word-spacing: normal;
-}
+
 .bottom i{
     padding: 1em;
     color: rgb(218, 197, 197);
