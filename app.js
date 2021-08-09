@@ -297,11 +297,3 @@ function payWithPaystack(){
     });
     handler.openIframe();
   }
-
-
-
-  function show(){
-        cartOverlay.classList.add('transparentBcg');
-        cartEl.classList.add('showCart');
-
-  }

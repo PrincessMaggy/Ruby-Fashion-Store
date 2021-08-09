@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"> </script>
+   
     <script src="https://kit.fontawesome.com/349ea2471d.js" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=MonteCarlo&display=swap" rel="stylesheet">
@@ -11,76 +13,18 @@
     
     <link rel="stylesheet" href="style.css" >
     <title>Product Page</title>
-    
+     <script> 
+      $(function(){
+        $("#navmenu").load("nav.html"); 
+      });
+      </script>  
 </head>
 <body>
  
-<header>
-    <!-- navigation menu -->
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-            <!-- <div class="navbar-center"> -->
-        <a class="navbar-brand" href="#">
-                <img src="images/logo.png"  alt=""  class="d-inline-block align-text-top"/> 
-              </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html"> HOME</a>
-                </li>
-            
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      BRANDS
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">SHOES</a></li>
-                    <li><a class="dropdown-item" href="#">BAGS</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#"> SUITS
-                    </a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">NEW ARRIVALS</a>
-                </li>
-                
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      MORE
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">LOG IN</a></li>
-                    <li><a class="dropdown-item" href="#">SIGN UP</a></li>
-                  </ul>
-                </li>
 
-                <li class="nav-item">
-                    <div class="cart-btn">
-                        <span class="nav-icon">
-                            <a class="nav-link"  href="index.html#cart" onclick="show()">  <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                       
-                        <div class="cart-items">0</div> </span>
-                    </div>
-                </li>
-                
-              </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
-                <button  type="submit" id="btn">Search</button>
-              </form>
-        </div>
-    </div>
-</nav>
-</header>
-
-
-
-
-
+  <div id="navmenu">
+  </div>
+  
 
 
       <main>
@@ -278,6 +222,21 @@
 
 
               </section>
+
+<!-- cart section -->
+              <section>
+                <div class="cart-overlay">
+                    <div class="cart">
+                        <span class="close-cart"><i class="far fa-window-close"></i></span>
+                        <h2>Your cart</h2>
+                        <div class="cart-content"></div>
+                        <div class="cart-footer">
+                            <h3>Your total : <span class="cart-total">0</span></h3>
+                             <a href="checkout.html"><button class="checkout banner-btn">checkout</button></a>
+                        </div>
+                    </div>
+                </div>
+                </section>
 
               
               <section class="mt-4">
