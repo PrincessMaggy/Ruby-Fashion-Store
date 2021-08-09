@@ -110,7 +110,7 @@
             });
     };
 
-    const updatCartGlobalData = () => {
+    function updatCartGlobalData() {
         // update cart items icon
         cartItemsCount.textContent = cart.items.length;
         // re-calculcate total cart price
@@ -271,3 +271,36 @@
     cartBtn.addEventListener('click', showCart);
     closeCartBtn.addEventListener('click', hideCart);
 })();
+
+
+
+
+// Incorporating paystack into the checkout form
+function payWithPaystack(){
+    var handler = PaystackPop.setup({
+      key: 'pk_test_257fd49306d22fc5272e205eaeac418cbcc4876d',
+      email: 'customer@email.com',
+      amount: 10000,
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      metadata: {
+         custom_fields: [
+            {
+                display_name: "Mobile Number",
+                variable_name: "mobile_number",
+                value: "+2348012345678"
+            }
+         ]
+      },
+      callback: function(response){
+          alert('success. transaction ref is ' + response.reference);
+      }
+    });
+    handler.openIframe();
+  }
+
+
+
+  function show(){
+        cartOverlay.classList.add('transparentBcg');
+        cartEl.classList.add('showCart');
+  }

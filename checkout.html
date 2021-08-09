@@ -59,7 +59,7 @@
                 <li class="nav-item">
                     <div class="cart-btn">
                         <span class="nav-icon">
-                            <a class="nav-link" href="index.html">  <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+                            <a class="nav-link" href="index.html#cart" onclick="show()">  <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
                        
                         <div class="cart-items">0</div> </span>
                     </div>
@@ -83,7 +83,7 @@
           <h2>Checkout form</h2>
          </div>
       
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-4 order-md-2 mb-4">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
               <span class="text-muted">Your cart</span>
@@ -117,7 +117,7 @@
                 <strong>---</strong>
               </li>
             </ul>
-          </div>
+          </div> -->
 
 
           <div class="col-md-8 order-md-1">
@@ -194,70 +194,18 @@
                 </div>
                 <div class="col-md-3 mb-3">
                   <label for="zip">Zip</label>
-                  <input type="text" class="form-control" id="zip" placeholder="" required>
+                  <input type="text" class="form-control" id="zip" placeholder="zip code" required>
                   <div class="invalid-feedback">
                     Zip code required.
                   </div>
                 </div>
               </div>
               <hr class="mb-4">
-              <button class="btn5 btn-sm btn-block" type="submit">Submit Form</button>
-           
               
-      
-              <!-- <h4 class="mb-3">Payment</h4>
-      
-              <div class="d-block my-3">
-                <div class="custom-control custom-radio">
-                  <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                  <label class="custom-control-label" for="credit">Credit card</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                  <label class="custom-control-label" for="debit">Debit card</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                  <label class="custom-control-label" for="paypal">PayPal</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="cc-name">Name on card</label>
-                  <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                  <small class="text-muted">Full name as displayed on card</small>
-                  <div class="invalid-feedback">
-                    Name on card is required
-                  </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="cc-number">Credit card number</label>
-                  <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                  <div class="invalid-feedback">
-                    Credit card number is required
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-3 mb-3">
-                  <label for="cc-expiration">Expiration</label>
-                  <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                  <div class="invalid-feedback">
-                    Expiration date required
-                  </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                  <label for="cc-cvv">CVV</label>
-                  <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                  <div class="invalid-feedback">
-                    Security code required
-                  </div>
-                </div>
-              </div>
-              <hr class="mb-4">
-              <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
-            </form> -->
-          <!-- </div> -->
+              <form>
+                <script src="https://js.paystack.co/v1/inline.js"></script>
+                <button type="button" onclick="payWithPaystack()" style="padding: 1em;"> Pay with PayStack</button> 
+              </form>
         </div>
       </div>
 
