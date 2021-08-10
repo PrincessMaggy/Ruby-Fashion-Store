@@ -12,64 +12,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     
     <link rel="stylesheet" href="style.css" >
-    <title>Check Out</title>
-    <script> 
-      $(function(){
-        $("#navmenu").load("nav.html"); 
-      });
-      </script>  
+    <title>Check Out</title> 
 </head>
 <body>
  
 
-  <div id="navmenu">
-  </div>
+  <div id="navmenu"> </div>
   
 
     <main>
       <div class="container">
         <div class="py-5">
           
-          <h2>Checkout form</h2>
+          <!-- <h2>Checkout form</h2> -->
          </div>
-      
-        <!-- <div class="row">
-          <div class="col-md-4 order-md-2 mb-4">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-              <span class="text-muted">Your cart</span>
-              <span class="badge badge-secondary badge-pill">3</span>
-            </h4>
-            <ul class="list-group mb-3">
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                  <h6 class="my-0">Product name</h6>
-                  <small class="text-muted">---</small>
-                </div>
-                <span class="text-muted">$12</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                  <h6 class="my-0">Second product</h6>
-                  <small class="text-muted">---</small>
-                </div>
-                <span class="text-muted">---</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                  <h6 class="my-0">Third item</h6>
-                  <small class="text-muted">---</small>
-                </div>
-                <span class="text-muted">---</span>
-              </li>
-              
-              <li class="list-group-item d-flex justify-content-between">
-                <span>Total (USD)</span>
-                <strong>---</strong>
-              </li>
-            </ul>
-          </div> -->
-
-
           <div class="col-md-8 order-md-1">
             <h4 class="mb-3">Billing</h4>
               <form class="needs-validation" novalidate>
@@ -106,7 +62,7 @@
       
               <div class="mb-3">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <input type="email" class="form-control" id="e-mail" placeholder="you@example.com">
                 <div class="invalid-feedback">
                   Please enter a valid email address for shipping updates.
                 </div>
@@ -154,7 +110,7 @@
               
               <form>
                 <script src="https://js.paystack.co/v1/inline.js"></script>
-                <button type="button" onclick="payWithPaystack()" style="padding: 1em;"> Pay with PayStack</button> 
+                <button type="button" id="payStack" style="padding: 1em;"> Pay with PayStack</button> 
               </form>
         </div>
       </div>
@@ -253,7 +209,11 @@
   
   
 </footer>
-
+<script> 
+  $(function(){
+    $("#navmenu").load("nav.html"); 
+  });
+  </script> 
 
 <script src="app.js"></script>
 

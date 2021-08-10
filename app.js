@@ -80,6 +80,9 @@
         return cart.totalPrice;
     };
 
+
+   
+      
     const renderCartItemLayout = product => formatter => {
         const itemContent = createCartItemContent(product)(formatter);
         const itemNode = createNode('div', 'cart-item', itemContent);
@@ -237,6 +240,10 @@
         );
     };
 
+
+     
+
+
     const createProductsGrids = loadProductsfunc => async formatter => {
         const productsContainer = document.getElementById('products-container');
         const products = await loadProductsfunc();
@@ -275,25 +282,31 @@
 
 
 
-// Incorporating paystack into the checkout form
-function payWithPaystack(){
+
+
+// Incorporating paystack into the checkout form   
+function payWithPaystack(event){
+        
+    totalPrice =  formatPrice(calcTotalCartPrice());
+    totalPrice = parseInt(totalPrice.replace('$', ''));
     var handler = PaystackPop.setup({
       key: 'pk_test_257fd49306d22fc5272e205eaeac418cbcc4876d',
-      email: 'customer@email.com',
-      amount: 10000,
-      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-      metadata: {
-         custom_fields: [
-            {
-                display_name: "Mobile Number",
-                variable_name: "mobile_number",
-                value: "+2348012345678"
-            }
-         ]
-      },
+      email: document.getElementById('e-mail').value,
+        amount: totalPrice * 100,
+         currency: 'NGN',
+        
       callback: function(response){
-          alert('success. transaction ref is ' + response.reference);
-      }
+         alert('success. transaction ref is ' + response.reference);
+         localStorage.clear();
+        
+         handlePageSwitch('checkout.html', 'index.html');
+      },
+      onClose() {
+        alert('Your transaction was not completed, window closed.');
+      },
     });
     handler.openIframe();
-  }
+  
+  };
+
+  document.getElementById('payStack').addEventListener('click', payWithPaystack);
