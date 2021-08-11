@@ -1,3 +1,179 @@
+//  html footer section
+function foot(){
+    let footerContent= document.querySelector('footer');
+    footerContent.innerHTML =`
+        <section class="bottom">
+                    
+        <p><span> Ruby Fashion Store </span>is the world’s leading community for creatives to share, grow, and get hired.</p>
+            
+        <div id="icons">
+            <i class="fas fa-gem"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-pinterest"></i>
+            </div> 
+    
+            <div class="lists"> 
+                <div class="link">
+                    <ul>
+                    <li><a href="#">For designers</a></li>
+                    <li><a href="#"> Go Pro!</a></li>
+                    <li><a href="#">Explore design work</a></li>
+                    <li><a href="#">Overtime podcast</a></li>
+                    <li><a href="#"> Code of conduct</a></li>
+                    <li><a href="#">Weekly Warm-Up</a></li>
+                    <li><a href="#"> Code of conduct</a></li>
+                    </ul>
+                    </div>
+    
+                <div class="link">
+                    <ul>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+    
+                <div class="link">
+                    <ul>
+                    <li><a href="#">Directories</a></li>
+                    <li><a href="#">Design jobs</a></li>
+                    <li><a href="#">Designers for hire</a></li>
+                    <li><a href="#">Freelance designers for hire</a></li>
+                    <li><a href="#">Tags</a></li>
+                    <li><a href="#">Design assets</a></li>
+                    <li><a href="#">Shop Creative Market</a></li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <ul>
+                        <li><a href="#"> Hire designers</a></li>
+                        <li><a href="#">Post a freelance project</a></li>
+                        <li><a href="#"> Search for designers</a></li>
+                        <li><a href="#">Brands</a></li>
+                        <li><a href="#">Advertise with us</a></li>
+                    </ul>
+                    </div>
+            
+        </div>
+    
+        </section>
+    
+    
+        <section class="reserved">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png"  alt=""  class="d-inline-block align-text-top"/> 
+        </a>
+        <p> &copy 2021 Ruby. All rights reserved.</p>
+        <p>Designed by Maggy.</p>
+        
+        </section>`;
+    
+    }
+    foot();
+    
+
+
+    
+    
+// html  header section
+ function head(){
+    let headerContent = document.querySelector('header');
+    headerContent.innerHTML =` <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+            <!-- <div class="navbar-center"> -->
+        <a class="navbar-brand" href="#">
+                <img src="images/logo.png"  alt=""  class="d-inline-block align-text-top"/> 
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html"> HOME</a>
+                </li>
+            
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      BRANDS
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">SHOES</a></li>
+                    <li><a class="dropdown-item" href="#">BAGS</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#"> SUITS
+                    </a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">NEW ARRIVALS</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      MORE
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">LOG IN</a></li>
+                    <li><a class="dropdown-item" href="#">SIGN UP</a></li>
+                  </ul>
+                </li>
+    
+                <li class="nav-item">
+                    <div class="cart-btn">
+                        <span class="nav-icon">
+                            <a class="nav-link" href="#cart">  <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+                       
+                        <div class="cart-items">0</div> </span>
+                    </div>
+                </li>
+                
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
+                <button  type="submit" id="btn">Search</button>
+              </form>
+        </div>
+    </div>
+    </nav>`;
+    }
+    head();
+
+
+
+
+// html cart section 
+ function carts (){
+     let CartStructure = document.querySelector('#carts');
+     CartStructure.innerHTML= ` <div class="cart-overlay">
+     <div class="cart">
+         <span class="close-cart"><i class="far fa-window-close"></i></span>
+         <h2>Your cart</h2>
+         <div class="cart-content"></div>
+         <div class="cart-footer">
+             <h3>Your total : <span class="cart-total">0</span></h3>
+              <a href="checkout.html"><button class="checkout banner-btn">checkout</button></a>
+         </div>
+     </div>
+ </div>`
+
+ }
+carts();
+
+
+
+
+
+
+
+    // cart section
 (function() {
     const cartBtn = document.querySelector('.cart-btn');
     const cartOverlay = document.querySelector('.cart-overlay');
@@ -279,34 +455,3 @@
     closeCartBtn.addEventListener('click', hideCart);
 })();
 
-
-
-
-
-
-// Incorporating paystack into the checkout form   
-function payWithPaystack(event){
-        
-    totalPrice =  formatPrice(calcTotalCartPrice());
-    totalPrice = parseInt(totalPrice.replace('$', ''));
-    var handler = PaystackPop.setup({
-      key: 'pk_test_257fd49306d22fc5272e205eaeac418cbcc4876d',
-      email: document.getElementById('e-mail').value,
-        amount: totalPrice * 100,
-         currency: 'NGN',
-        
-      callback: function(response){
-         alert('success. transaction ref is ' + response.reference);
-         localStorage.clear();
-        
-         handlePageSwitch('checkout.html', 'index.html');
-      },
-      onClose() {
-        alert('Your transaction was not completed, window closed.');
-      },
-    });
-    handler.openIframe();
-  
-  };
-
-  document.getElementById('payStack').addEventListener('click', payWithPaystack);
